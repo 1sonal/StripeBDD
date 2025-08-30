@@ -1,0 +1,225 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome1",
+    "definitions": {
+        "Welcome1": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "object": {
+                    "type": "string"
+                },
+                "account_balance": {
+                    "type": "integer"
+                },
+                "address": {
+                    "$ref": "#/definitions/Address"
+                },
+                "balance": {
+                    "type": "integer"
+                },
+                "created": {
+                    "type": "integer"
+                },
+                "currency": {
+                    "type": "null"
+                },
+                "default_currency": {
+                    "type": "null"
+                },
+                "default_source": {
+                    "type": "null"
+                },
+                "delinquent": {
+                    "type": "boolean"
+                },
+                "description": {
+                    "type": "null"
+                },
+                "discount": {
+                    "type": "null"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "invoice_prefix": {
+                    "type": "string"
+                },
+                "invoice_settings": {
+                    "$ref": "#/definitions/InvoiceSettings"
+                },
+                "livemode": {
+                    "type": "boolean"
+                },
+                "metadata": {
+                    "$ref": "#/definitions/Metadata"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "next_invoice_sequence": {
+                    "type": "integer"
+                },
+                "phone": {
+                    "type": "null"
+                },
+                "preferred_locales": {
+                    "type": "array",
+                    "items": {}
+                },
+                "shipping": {
+                    "type": "null"
+                },
+                "sources": {
+                    "$ref": "#/definitions/Sources"
+                },
+                "subscriptions": {
+                    "$ref": "#/definitions/Sources"
+                },
+                "tax_exempt": {
+                    "type": "string"
+                },
+                "tax_ids": {
+                    "$ref": "#/definitions/Sources"
+                },
+                "tax_info": {
+                    "type": "null"
+                },
+                "tax_info_verification": {
+                    "type": "null"
+                },
+                "test_clock": {
+                    "type": "null"
+                }
+            },
+            "required": [
+                "account_balance",
+                "address",
+                "balance",
+                "created",
+                "currency",
+                "default_currency",
+                "default_source",
+                "delinquent",
+                "description",
+                "discount",
+                "email",
+                "id",
+                "invoice_prefix",
+                "invoice_settings",
+                "livemode",
+                "metadata",
+                "name",
+                "next_invoice_sequence",
+                "object",
+                "phone",
+                "preferred_locales",
+                "shipping",
+                "sources",
+                "subscriptions",
+                "tax_exempt",
+                "tax_ids",
+                "tax_info",
+                "tax_info_verification",
+                "test_clock"
+            ],
+            "title": "Welcome1"
+        },
+        "Address": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "city": {
+                    "type": "string"
+                },
+                "country": {
+                    "type": "null"
+                },
+                "line1": {
+                    "type": "null"
+                },
+                "line2": {
+                    "type": "null"
+                },
+                "postal_code": {
+                    "type": "null"
+                },
+                "state": {
+                    "type": "null"
+                }
+            },
+            "required": [
+                "city",
+                "country",
+                "line1",
+                "line2",
+                "postal_code",
+                "state"
+            ],
+            "title": "Address"
+        },
+        "InvoiceSettings": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "custom_fields": {
+                    "type": "null"
+                },
+                "default_payment_method": {
+                    "type": "null"
+                },
+                "footer": {
+                    "type": "null"
+                },
+                "rendering_options": {
+                    "type": "null"
+                }
+            },
+            "required": [
+                "custom_fields",
+                "default_payment_method",
+                "footer",
+                "rendering_options"
+            ],
+            "title": "InvoiceSettings"
+        },
+        "Metadata": {
+            "type": "object",
+            "additionalProperties": false,
+            "title": "Metadata"
+        },
+        "Sources": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "object": {
+                    "type": "string"
+                },
+                "data": {
+                    "type": "array",
+                    "items": {}
+                },
+                "has_more": {
+                    "type": "boolean"
+                },
+                "total_count": {
+                    "type": "integer"
+                },
+                "url": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "data",
+                "has_more",
+                "object",
+                "total_count",
+                "url"
+            ],
+            "title": "Sources"
+        }
+    }
+}

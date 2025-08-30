@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- Suite -->
+<suite name="Stripe API TEST SUITE" configfailurepolicy="continue">
+	
+	<test name="Stripe API TEST">
+	<classes>
+	<class name="com.runners.Stripe_BDD_Runner" />
+	</classes>
+	</test> <!-- Test -->
+
+</suite>

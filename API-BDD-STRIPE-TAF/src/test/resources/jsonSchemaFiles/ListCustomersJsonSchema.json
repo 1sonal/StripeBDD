@@ -1,0 +1,268 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome5",
+    "definitions": {
+        "Welcome5": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "object": {
+                    "$ref": "#/definitions/Welcome5Object"
+                },
+                "data": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Datum"
+                    }
+                },
+                "has_more": {
+                    "type": "boolean"
+                },
+                "url": {
+                    "type": "string"
+                },
+                "total_count": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "data",
+                "has_more",
+                "object",
+                "url"
+            ],
+            "title": "Welcome5"
+        },
+        "Datum": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "object": {
+                    "$ref": "#/definitions/DatumObject"
+                },
+                "account_balance": {
+                    "type": "integer"
+                },
+                "address": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/Address"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "balance": {
+                    "type": "integer"
+                },
+                "created": {
+                    "type": "integer"
+                },
+                "currency": {
+                    "type": "null"
+                },
+                "default_currency": {
+                    "type": "null"
+                },
+                "default_source": {
+                    "type": "null"
+                },
+                "delinquent": {
+                    "type": "boolean"
+                },
+                "description": {
+                    "anyOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ]
+                },
+                "discount": {
+                    "type": "null"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "invoice_prefix": {
+                    "type": "string"
+                },
+                "invoice_settings": {
+                    "$ref": "#/definitions/InvoiceSettings"
+                },
+                "livemode": {
+                    "type": "boolean"
+                },
+                "metadata": {
+                    "$ref": "#/definitions/Metadata"
+                },
+                "name": {
+                    "anyOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ]
+                },
+                "next_invoice_sequence": {
+                    "type": "integer"
+                },
+                "phone": {
+                    "type": "null"
+                },
+                "preferred_locales": {
+                    "type": "array",
+                    "items": {}
+                },
+                "shipping": {
+                    "type": "null"
+                },
+                "sources": {
+                    "$ref": "#/definitions/Welcome5"
+                },
+                "subscriptions": {
+                    "$ref": "#/definitions/Welcome5"
+                },
+                "tax_exempt": {
+                    "$ref": "#/definitions/TaxExempt"
+                },
+                "tax_ids": {
+                    "$ref": "#/definitions/Welcome5"
+                },
+                "tax_info": {
+                    "type": "null"
+                },
+                "tax_info_verification": {
+                    "type": "null"
+                },
+                "test_clock": {
+                    "type": "null"
+                }
+            },
+            "required": [
+                "account_balance",
+                "address",
+                "balance",
+                "created",
+                "currency",
+                "default_currency",
+                "default_source",
+                "delinquent",
+                "description",
+                "discount",
+                "email",
+                "id",
+                "invoice_prefix",
+                "invoice_settings",
+                "livemode",
+                "metadata",
+                "name",
+                "next_invoice_sequence",
+                "object",
+                "phone",
+                "preferred_locales",
+                "shipping",
+                "sources",
+                "subscriptions",
+                "tax_exempt",
+                "tax_ids",
+                "tax_info",
+                "tax_info_verification",
+                "test_clock"
+            ],
+            "title": "Datum"
+        },
+        "Address": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "city": {
+                    "type": "string"
+                },
+                "country": {
+                    "type": "null"
+                },
+                "line1": {
+                    "type": "null"
+                },
+                "line2": {
+                    "type": "null"
+                },
+                "postal_code": {
+                    "type": "null"
+                },
+                "state": {
+                    "type": "null"
+                }
+            },
+            "required": [
+                "city",
+                "country",
+                "line1",
+                "line2",
+                "postal_code",
+                "state"
+            ],
+            "title": "Address"
+        },
+        "InvoiceSettings": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "custom_fields": {
+                    "type": "null"
+                },
+                "default_payment_method": {
+                    "type": "null"
+                },
+                "footer": {
+                    "type": "null"
+                },
+                "rendering_options": {
+                    "type": "null"
+                }
+            },
+            "required": [
+                "custom_fields",
+                "default_payment_method",
+                "footer",
+                "rendering_options"
+            ],
+            "title": "InvoiceSettings"
+        },
+        "Metadata": {
+            "type": "object",
+            "additionalProperties": false,
+            "title": "Metadata"
+        },
+        "DatumObject": {
+            "type": "string",
+            "enum": [
+                "customer"
+            ],
+            "title": "DatumObject"
+        },
+        "TaxExempt": {
+            "type": "string",
+            "enum": [
+                "none"
+            ],
+            "title": "TaxExempt"
+        },
+        "Welcome5Object": {
+            "type": "string",
+            "enum": [
+                "list"
+            ],
+            "title": "Welcome5Object"
+        }
+    }
+}
