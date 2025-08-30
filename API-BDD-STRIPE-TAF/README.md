@@ -53,7 +53,7 @@ There are a few secondary keywords as well:
 Doc Strings are handy for passing a larger piece of text to a step definition.They support three double-quote marks and three backticks as the delimiter.
 + | (Data Tables) - Data Tables are handy for passing a list of values to a step definition.
 + @ (Tags) - Tags are optional and can be added to scenarios or feature sections using the @ symbol. They provide metadata and can be used for categorization, filtering, or reporting purposes.
-+ # (Comments) - Comments can be added to the feature file using the # symbol. They are useful for providing additional context, explanations, or annotations
++ \# (Comments) - Comments can be added to the feature file using the # symbol. They are useful for providing additional context, explanations, or annotations
 
 # 3. Cucumber Step Definition File
 
