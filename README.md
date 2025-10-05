@@ -3,7 +3,7 @@
 
 
 
-•	API-BDD-STRIPE-TAF  makes it easier to write high quality automated tests, with powerful reporting.<br>
+•	API-BDD-STRIPE-TAF  makes it easier to write high quality API automation tests, with powerful reporting.<br>
 •	Tests are written in BDD Gherkin format and it is represented as a living documentation in the test report.<br>
 •	Application under test: https://44.197.194.76:8080<br>
 -----------
@@ -27,6 +27,7 @@
 * Maven
 * Cucumber Eclipse plugin
 * TestNG
+* Rest Assured
 
 
 #2. Cucumber feature file
@@ -96,7 +97,7 @@ The framework consists of following modules.
 
 ## b.  Runners
 
- It consists of DataBuck_BDD_Runner class. We can run tests using this test runner file for Cucumber. The test runner file should contain the path of the feature file and step definition file that we want to execute.
+ It consists of Stripe_BDD_Runner class. We can run tests using this test runner file for Cucumber. The test runner file should contain the path of the feature file and step definition file that we want to execute.
 
 ## c.  stepDefs 
 
