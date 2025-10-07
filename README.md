@@ -9,13 +9,10 @@
 -----------
 #### Table of contents<br>
 - [Prerequisite](#1-prerequisite) 
-- [Cucumber feature file](#2-cucumber-feature-file)
-- [Cucumber Step Definition File](#3-cucumber-step-definition-file)
-- [Cucumber Test Runner File](#4-cucumber-test-runner-file) 
-- [Framework Modules](#5-framework-modules)
-- [How to execute the project?](#6-how-to-execute-the-project)
-- [Where to see the execution reports?](#7-where-to-see-the-execution-reports)
-- [Where to see the failed testcase execution report?](#8-where-to-see-the-failed-testcase-execution-report)
+- [Framework Modules](#2-framework-modules)
+- [How to execute the project?](#3-how-to-execute-the-project)
+- [Where to see the execution reports?](#4-where-to-see-the-execution-reports)
+- [Where to see the failed testcase execution report?](#5-where-to-see-the-failed-testcase-execution-report)
 
 ----------
 
@@ -31,53 +28,8 @@
 * Rest Assured
 
 
-#2. Cucumber feature file
 
-
-A feature file offers a high-level description of an Application Under Test (AUT).It is an entry point to the Cucumber tests. This is a file where you will describe your tests in Descriptive language (Like English). It is an essential part of Cucumber, as it serves as an automation test script as well as live documents. 
-The extension of the feature file needs to be “.feature”.A simple feature file consists of the following keywords/parts.
-+ Feature:The purpose of the Feature keyword is to provide a high-level description of a software feature and to group related scenarios.
-+ Scenario: A scenario represents a specific test case or a behavior to be tested. It describes a particular situation or use case. Scenarios are defined using the Scenario keyword, followed by a description. 
-+ Scenario Outline: A scenario outline allows for the description of multiple scenarios using a template with placeholders. It is useful when testing similar behaviors with different inputs. The Scenario Outline keyword is used, followed by a description and an Examples section.
-+ Examples - A Scenario Outline must contain one or more Examples (or Scenarios) section(s). Its steps are interpreted as a template which is never directly run. Instead, the Scenario Outline is run once for each row in the Examples section beneath it (not counting the first header row).
-The steps can use <> delimited parameters that reference headers in the examples table. Cucumber will replace these parameters with values from the table before it tries to match the step against a step definition
-+ Description (optional) − Describe about feature under test.
-+ Given − Prerequisite before the test steps get executed.
-+ When − Specific condition which should match in order to execute the next step.
-+ Then − What should happen if the condition mentioned in WHEN is satisfied.
-+ AND - AND keyword is used to show conjunction between two conditions. AND can be used with any other keywords like GIVEN, WHEN and THEN.
-+ Asterisk - Gherkin also supports using an asterisk (*) in place of any of the normal step keywords. This can be helpful when you have some steps that are effectively a list of things, so you can express it more like bullet points where otherwise the natural language of And etc might not read so elegantly.
-+ BUT - BUT keyword is used to add negative type comments. It is good to use when your step describes a condition that is not expected. For example, when you expect some text or element to not be present on the page.
-+ Rule - The purpose of the Rule keyword is to represent one business rule that should be implemented. It provides additional information for a feature. A Rule is used to group together several scenarios that belong to this business rule. A Rule should contain one or more scenarios that illustrate the particular rule.
-+ Background - A Background allows you to add some context to the scenarios that follow it. It can contain one or more Given steps, which are run before each scenario, but after any Before hooks.A Background is placed before the first Scenario/Example, at the same level of indentation.<br><br>
-There are a few secondary keywords as well:
-+ """ (Doc Strings) - In some cases you might want to pass more data to a step than fits on a single line. For this purpose Gherkin has Doc Strings and Data Tables.
-Doc Strings are handy for passing a larger piece of text to a step definition.They support three double-quote marks and three backticks as the delimiter.
-+ | (Data Tables) - Data Tables are handy for passing a list of values to a step definition.
-+ @ (Tags) - Tags are optional and can be added to scenarios or feature sections using the @ symbol. They provide metadata and can be used for categorization, filtering, or reporting purposes.
-+ \# (Comments) - Comments can be added to the feature file using the # symbol. They are useful for providing additional context, explanations, or annotations
-
-# 3. Cucumber Step Definition File
-
-
-A Step Definition is a small piece of code with a pattern attached to it or in other words a Step Definition is a java method in a class with an annotation above it. An annotation followed by the pattern is used to link the Step Definition to all the matching Steps, and the code is what Cucumber will execute when it sees a Gherkin Step. Cucumber finds the Step Definition file with the help of the Glue code in Cucumber Options. 
-
-# 4. Cucumber Test Runner File
-
-
-We can run tests using a test runner file for Cucumber. It uses the @CucumberOptions Annotation to define the location of feature files, step definitions, reporting integrations, etc. It contains following options.
-+ dryRun - dryRun option can either set as true or false. If it is set as true, it means that Cucumber will only check that every Step mentioned in the Feature File has corresponding code written in Step Definition file or not. So in case any of the functions are missed in the Step Definition for any Step in Feature File, it will give us the message
-+ Monochrome - This option can either set as true or false. If it is set as true, it means that the console output for the Cucumber test are much more readable. And if it is set as false, then the console output is not as readable as it should be. 
-+ features - Features Options helps Cucumber to locate the Feature file in the project folder structure. 
-+ glue - it helps Cucumber to locate the Step Definition file.
-+ Format - We use Cucumber format option to generate output or test results in different types of formats. 
-Eg: HTML Report, JUnit or TestNG Report, Cucumber Report and So. 
-+ strict -  We use Cucumber strict option to check if any step is not defined in step definition file. 
-If any step is not defined in step definition file then it will stop an execution of program.
-+ tags - We use Cucumber tags option when we have more number of scenarios in a single feature file which represents different purpose [Smoke, Sanity, Regression etc] in such cases we can make use tags option.
-Eg: tags={ ” @ Smoke ” } >> It will pick only and only those scenarios which are tagged with Smoke in feature files.
-
-# 5. Framework Modules
+# 2. Framework Modules
 
 
 The framework consists of following modules.
@@ -118,15 +70,15 @@ It consists of following folders.
 + textFiles:-The output CSV file and text file are stored here.
 
 
-# 6. How to execute the project?
+# 3. How to execute the project?
 
 Use maven command: clean test verify    
 
-# 7. Where to see the execution reports?
+# 4. Where to see the execution reports?
 
 target->cucumber-report->cucumber-html-reports-overview-features.html
 
-# 8. Where to see the failed testcase execution report?
+# 5. Where to see the failed testcase execution report?
 
 target->cucumber-report->cucumber-html-reports-overview-failures.html
 
